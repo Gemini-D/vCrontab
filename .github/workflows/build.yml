@@ -1,10 +1,6 @@
 name: Node.js Package
 on:
   push:
-    tags:
-      - "*"
-    branch:
-      - "master"
 
 jobs:
   publish-npm:
