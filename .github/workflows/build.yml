@@ -3,7 +3,8 @@ on:
   push:
     tags:
       - "*"
-  branch:
+    branch:
+      - "master"
 
 jobs:
   publish-npm:
