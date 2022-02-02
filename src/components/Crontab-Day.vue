@@ -6,11 +6,11 @@
 			</el-radio>
 		</el-form-item>
 
-		<el-form-item>
-			<el-radio v-model='radioValue' :label="2">
-				不指定
-			</el-radio>
-		</el-form-item>
+<!--		<el-form-item>-->
+<!--			<el-radio v-model='radioValue' :label="2">-->
+<!--				不指定-->
+<!--			</el-radio>-->
+<!--		</el-form-item>-->
 
 		<el-form-item>
 			<el-radio v-model='radioValue' :label="3">
@@ -74,7 +74,7 @@ export default {
 			('day rachange');
 			if (this.radioValue === 1) {
 				this.$emit('update', 'day', '*', 'day');
-				this.$emit('update', 'week', '?', 'day');
+				this.$emit('update', 'week', '*', 'day');
 				this.$emit('update', 'mouth', '*', 'day');
 			} else {
 				if (this.cron.hour === '*') {
@@ -89,9 +89,9 @@ export default {
 			}
 
 			switch (this.radioValue) {
-				case 2:
-					this.$emit('update', 'day', '?');
-					break;
+				// case 2:
+				// 	this.$emit('update', 'day', '?');
+				// 	break;
 				case 3:
 					this.$emit('update', 'day', this.cycle01 + '-' + this.cycle02);
 					break;
